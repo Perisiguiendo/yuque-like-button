@@ -1,0 +1,43 @@
+.like-icon {
+  width: 80px;
+  height: 80px;
+  background-image: url(https://gw.alipayobjects.com/mdn/prod_resource/afts/img/A*eDsBTKcm1IcAAAAAAAAAAAAAARQnAQ);
+  background-position-x: 0;
+  background-size: auto 80px;
+  cursor: pointer;
+}
+
+.like-icon-hover-animation:hover {
+  animation-name: icon-shaking;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  transform-origin: 25px 67px;
+}
+
+.like-icon-click-animation {
+  animation-name: icon-liked;
+  animation-duration: 0.9s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(27);
+  animation-fill-mode: forwards;
+}
+
+@keyframes icon-shaking {
+  25% {
+    transform: rotate(6deg);
+  }
+  75% {
+    transform: rotate(-6deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes icon-liked {
+  to {
+    background-position: -2160px 0;
+    overflow: hidden;
+  }
+}
